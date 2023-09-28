@@ -1,0 +1,39 @@
+﻿@page
+@model WebApplication1_Razor_Page_Books.Pages.BookList.IndexModel
+
+<div class="container row border">
+    <div class="col-9">
+        <h2 class="text-primary">Book List</h2>
+    </div>
+    <div class="col-3">
+        <a asp-page="Create" class="btn btn-info">Create New Book</a>
+    </div>
+</div>
+
+<div class="container row border p-2 m-2">
+    <table class="table table-bordered table-striped table-active">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Books)
+            {
+                <tr>
+                    <td>@item.Title</td>
+                    <td>@item.Author</td>
+                    <td>@item.ISBN</td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@item.Id">Edit User</a>
+                        
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>

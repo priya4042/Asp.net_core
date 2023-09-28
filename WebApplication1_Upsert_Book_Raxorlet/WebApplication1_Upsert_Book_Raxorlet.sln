@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31501.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1_Upsert_Book_Raxorlet", "WebApplication1_Upsert_Book_Raxorlet\WebApplication1_Upsert_Book_Raxorlet.csproj", "{3129C91F-76FE-4306-BACF-BC7EE809264A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3129C91F-76FE-4306-BACF-BC7EE809264A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3129C91F-76FE-4306-BACF-BC7EE809264A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3129C91F-76FE-4306-BACF-BC7EE809264A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3129C91F-76FE-4306-BACF-BC7EE809264A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0834DF4-0A0C-4D0C-AF67-9C21D258F5B7}
+	EndGlobalSection
+EndGlobal

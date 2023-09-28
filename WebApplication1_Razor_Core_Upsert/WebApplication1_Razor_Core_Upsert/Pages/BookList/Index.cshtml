@@ -1,0 +1,53 @@
+﻿@page
+@model WebApplication1_Razor_Core_Upsert.Pages.BookList.IndexModel
+@{
+}
+
+<div class="container rounded row border p-2 m-2">
+    <div class="col-9">
+        <h2 class="text-primary">Book List</h2>
+    </div>
+    <div class="col-3">
+        <a asp-page="Create" class="btn btn-info">Create New Book</a>
+    </div>
+
+
+    <div class=" container row border p-2 m-2">
+        @if (Model.Books.Count() >0)
+        {
+            <table class="table table-bordered table-active table-striped text-center">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <form method="post">
+                        @foreach (var item in Model.Books)
+                        {
+                            <tr>
+                                <td>@item.Title</td>
+                                <td>@item.Author</td>
+                                <td>@item.ISBN</td>
+                                <td>
+                                    <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-info">Edit Book</a>
+                                    @*<a asp-page="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>*@
+
+                                    <button asp-page-handler="Delete" asp-route-id="@item.Id" class="btn btn-danger" onclick="return confirm('want to delete the data')">Delete</button>
+                                </td>
+                            </tr>
+                        }
+                    </form>
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p class="text-primary">No Data Found</p>
+        }
+
+    </div>
+</div>
